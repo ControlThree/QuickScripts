@@ -4,10 +4,10 @@ DELAY 100
 STRING terminal
 ENTER
 DELAY 200
-STRING ssh user@IPADDRESS
+STRING ssh root@178.30.28.1
 ENTER
 DELAY 100
-STRING password
+STRING roottoor
 ENTER
 DELAY 100
 STRING vi /etc/cron.d/unifi-restart
