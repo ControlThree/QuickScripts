@@ -1,1 +1,22 @@
-
+REM Unifi UDMPro Web Application Restart Tool
+CMD SPACE
+DELAY 100
+STRING terminal
+ENTER
+DELAY 200
+STRING ssh user@IPADDRESS
+ENTER
+DELAY 100
+STRING password
+ENTER
+DELAY 100
+STRING vi /etc/cron.d/unifi-restart
+ENTER
+DELAY 100
+SHIFT i
+DELAY 100
+STRING 45 */3 * * * unifi-os restart
+ESC
+STRING .wq
+ENTER
+DELAY 
