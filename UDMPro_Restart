@@ -1,24 +1,24 @@
 REM Unifi UDMPro Web Application Restart Tool
 DELAY 1000
-CMD SPACE
+GUI r
 DELAY 100
-STRING terminal
+STRING cmd
 ENTER
 DELAY 100
 STRING ssh root@178.30.28.1
 ENTER
-DELAY 10
+DELAY 100
 STRING roottoor
 ENTER
-DELAY 10
+DELAY 100
 STRING vi /etc/cron.d/unifi-restart
 ENTER
-DELAY 10
+DELAY 100
 STRING I
 DELAY 10
 STRING 45 */3 * * * unifi-os restart
 ESC
-DELAY 10
+DELAY 100
 STRING .wq
 ENTER
 
