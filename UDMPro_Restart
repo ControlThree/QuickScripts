@@ -1,5 +1,9 @@
 REM Unifi UDMPro Web Application Restart Tool
-DELAY 2000
+REM This will answer yes to continue and then enter the password if it's the first time using on a device
+REM It will creat the file and save it
+REM If the file is already created it will delete the first line and enter the new CRON expresson to reboot the Unifi OS
+
+DELAY 1000
 GUI r
 DELAY 500
 STRING cmd
@@ -7,18 +11,22 @@ ENTER
 DELAY 500
 STRING ssh root@178.30.28.1
 ENTER
-DELAY 2000
+DELAY 1000
 STRING YES
 ENTER
-DELAY 2000
+DELAY 500
 STRING roottoor
 ENTER
 DELAY 500
 STRING vi /etc/cron.d/unifi-restart
 ENTER
 DELAY 500
+STRING gg
+DElAY 100
+STRING dG
+DELAY 100
 STRING I
-DELAY 500
+DELAY 100
 STRING 45 */3 * * * unifi-os restart
 DELAY 500
 ESC
